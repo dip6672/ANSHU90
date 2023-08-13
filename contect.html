@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upcoming Matches</title>
+    <style>
+        body {
+            background-color: #3498db;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            transition: filter 0.3s;
+        }
+
+        li.blur {
+            filter: blur(4px);
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        p {
+            color: #555;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact</h1>
+        <ul>
+            <li class="blur">
+                <h2> S-Khan </h2>
+                <p> Head Coach</p>
+                <p>Number - 8969495099 </p>
+            </li>
+            <li class="blur">
+                <h2>Sushil keshri</h2>
+                <p>Caption</p>
+                <p>Number-89898989898989/p>
+            </li>
+            <li class="blur">
+                <h2>Chandan viswakrma</h2>
+                <p>practice coach</p>
+                <p>Number-9999999999999999</p>
+            </li>
+            <li class="blur">
+                <h2>Pratik pandey</h2>
+                <p>player-6</p>
+                <p>Number-9162706819</p>
+            </li>
+           
+           
+        </ul>
+    </div>
+    
+    <script>
+        const listItems = document.querySelectorAll('li');
+        
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                listItems.forEach(otherItem => {
+                    otherItem.classList.add('blur');
+                });
+                item.classList.remove('blur');
+            });
+
+            item.addEventListener('mouseleave', () => {
+                listItems.forEach(otherItem => {
+                    otherItem.classList.remove('blur');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
